@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accelerating the Cosmos: Real-Time Visualization of Black Hole Phenomena</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            font-size: 16px;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 20px;
+            color: #444;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            line-height: 1.6;
+            font-size: 18px;
+        }
+
+        .team {
+            font-size: 14px;
+            font-style: italic;
+            color: #555;
+        }
+
+        img {
+            display: block;
+            margin: 0 auto;
+            max-width: 60%;
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            padding: 0;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Accelerating the Cosmos: Real-Time Visualization of Black Hole Phenomena</h1>
+    </header>
+
+    <div class="container">
+        <p class="team">Team: Xiaowen Liu, Alina Sheng, David Long, Leo Yuan</p>
+        <p class="team">Video: <a href="https://youtu.be/vlvq9pDjlzA">https://youtu.be/vlvq9pDjlzA</a></p>
+
+        <section>
+            <h2>Abstract</h2>
+            <p>This project developed a real-time visualization tool for simulating black holes using the principles of general relativity. Employing the Schwarzschild model, the tool renders scenes with high accuracy. We are able to generate images showcasing phenomena such as the accretion disk, doppler beaming, and photon rings. We also built an interactive interface for the real-time visualizer which shows the gravitational lensing effects of a black hole.</p>
+        </section>
+
+        <section>
+            <h2>Technical Approach</h2>
+            <p>Our project focused on building a visualization tool from the ground up, leveraging WebGL for rendering and JavaScript for the interface. We aimed to simulate realistic gravitational lensing effects around black holes.</p>
+            <p>We implemented a ray-tracing algorithm that calculates light paths near a Schwarzschild black hole, taking into account the curvature of spacetime dictated by general relativity. To accommodate real-time rendering, we optimized these algorithms for performance, utilizing the GPU's parallel processing capabilities through WebGL.</p>
+            <p>We faced significant challenges related to numerical stability due to the intense gravitational fields simulated. To address these, we employed higher precision data types and refined our mathematical models for better stability in edge cases. Performance optimization was achieved by implementing more efficient data structures and reducing computational overhead in the shader programs.</p>
+            <p>Unlike many existing simulations that only focus on still images, our tool provides dynamic, real-time visualization. This required extensive optimization of the WebGL pipeline and careful management of memory and processing resources.</p>
+        </section>
+
+        <section>
+            <h2>Problems Encountered</h2>
+            <ul>
+                <li>Floating Point Precision: Handling the extreme ranges of values near a black hole required adjustments to the standard WebGL floating point precision.</li>
+                <li>Performance Bottlenecks: Initially, our simulations struggled with performance due to complex calculations in the fragment shader. We resolved this by optimizing shader code and employing level-of-detail techniques for distant objects.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Lessons Learned</h2>
+            <ul>
+                <li>Balancing Fidelity with Performance: We learned crucial strategies for balancing computational accuracy with the need for smooth, real-time performance in a graphical application.</li>
+                <li>GPU Utilization in Browsers: Mastering GPU utilization via WebGL opened new avenues for complex simulations that were previously thought unfeasible in browser environments.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Results</h2>
+            <p>Our final product successfully demonstrates a real-time, interactive visualization of a black hole surrounded by an accretion disk. Users can view the black hole from various angles and distances, observing the effects of gravitational lensing firsthand.</p>
+            <img src="image/out.png" alt="Black hole visualization">
+        </section>
+
+        <section>
+            <h2>Reference</h2>
+            <!-- <p>References to relevant literature and technical resources will go here.</p> -->
+        </section>
+
+        <section>
+            <h2>Contributions</h2>
+            <!-- <p>Contributions by each team member can be outlined in this section.</p> -->
+        </section>
+    </div>
+
+</body>
+</html>
